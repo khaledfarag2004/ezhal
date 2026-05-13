@@ -1,0 +1,44 @@
+.scroll-btn {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  z-index: 4;
+  align-items: center;
+  justify-content: center;
+  bottom: 45px;
+  text-align: center;
+  span {
+    width: 24px;
+    height: 45px;
+    border-radius: 12px;
+    background-color: rgba(2, 119, 250, 0);
+    border: 2px solid $secondary-color;
+    position: relative;
+    display: inline-block;
+    transition: all ease 0.3s;
+  }
+}
+
+.scroll-btn span::after {
+  content: "";
+  width: 2px;
+  height: 10px;
+  background-color: $secondary-color;
+  top: 6px;
+  opacity: 0;
+  left: 48%;
+  z-index: 3;
+  position: absolute;
+  transform: translateX(-48%);
+  animation-name: scroll;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+@keyframes scroll {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(20px);
+  }
+}

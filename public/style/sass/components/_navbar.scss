@@ -1,0 +1,108 @@
+.open-nav {
+  inset-inline-start: 0;
+}
+.openBtn {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  color: $primary-color;
+  font-size: 24px;
+  cursor: pointer;
+  transition: all linear 0.2s;
+  &:hover,
+  &:focus {
+    color: $primary-color;
+  }
+  @include sm {
+    display: flex;
+  }
+}
+.big-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  gap: 25px;
+  @include md {
+    gap: 15px;
+  }
+  a {
+    font-size: 14px;
+    color: $primary-color;
+    font-weight: 400;
+    text-transform: capitalize;
+    transition: all linear 0.2s;
+    &:focus {
+      color: $primary-color;
+    }
+    &:hover {
+      color: $secondary-color;
+    }
+    &.active {
+      color: $secondary-color;
+    }
+  }
+}
+
+@include sm {
+  .navigation {
+    overflow-y: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 100%;
+    height: 100vh;
+    background-color: $tertiary-color;
+    z-index: -1;
+    padding: 20px;
+    padding-top: 28px;
+  }
+  .big-menu {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    margin: 0;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+    width: 100%;
+    gap: 20px;
+    li {
+      margin-inline-end: 0;
+      text-align: start;
+      opacity: 0;
+      &:first-of-type {
+        transition: all 0.2s ease-in-out;
+      }
+
+      &:nth-of-type(2) {
+        transition: all 0.4s ease-in-out;
+      }
+
+      &:nth-of-type(3) {
+        transition: all 0.6s ease-in-out;
+      }
+
+      &:nth-of-type(4) {
+        transition: all 0.8s ease-in-out;
+      }
+
+      &:nth-of-type(5) {
+        transition: all 1s ease-in-out;
+      }
+
+      &:nth-of-type(6) {
+        transition: all 1.2s ease-in-out;
+      }
+      &:nth-of-type(7) {
+        transition: all 1.4s ease-in-out;
+      }
+    }
+    a {
+      font-size: 18px;
+    }
+  }
+}

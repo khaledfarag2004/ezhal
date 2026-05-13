@@ -1,0 +1,90 @@
+.mainBanner {
+  position: relative;
+  overflow: hidden;
+  background-color: $tertiary-color;
+}
+
+.main-content {
+  width: 100%;
+  min-height: 100vh;
+  padding: 40px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  @include sm {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 150px 0 100px;
+  }
+}
+
+.hero-mobile {
+  width: 100%;
+  overflow: hidden;
+  padding-top: 60px;
+  margin-inline-end: -15px;
+  img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+  @include sm {
+    width: 100%;
+    max-width: 575px;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+
+.banner-desc {
+  width: 100%;
+  text-align: center;
+  padding-top: 50px;
+  padding-inline-end: 25px;
+  .main-title {
+    font-size: 36px;
+    text-transform: capitalize;
+    line-height: 50px;
+    margin-bottom: 10px;
+    color: $primary-color;
+    font-weight: 700;
+    text-align: start;
+    @include sm {
+      text-align: center;
+    }
+    @include xs {
+      font-size: 28px;
+    }
+  }
+  .second-title {
+    font-size: 28px;
+    line-height: 40px;
+    color: $primary-color;
+    font-weight: 400;
+    text-align: start;
+    margin: 0;
+    @include sm {
+      text-align: center;
+    }
+    @include xs {
+      font-size: 18px;
+    }
+  }
+  .download-links {
+    justify-content: flex-start;
+    @include sm {
+      justify-content: center;
+    }
+    @include xs {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+      a {
+        width: 100%;
+      }
+    }
+  }
+  @include md {
+    padding: 0;
+  }
+}

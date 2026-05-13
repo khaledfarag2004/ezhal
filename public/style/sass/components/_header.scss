@@ -1,0 +1,89 @@
+header {
+  padding: 1px 0;
+  position: fixed;
+  background-color: transparent;
+  z-index: 20;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  transition: all ease-in-out 0.2s;
+  @include sm {
+    padding: 1px 0;
+  }
+}
+
+.header-content {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 3fr 1fr;
+  @include sm {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.logo {
+  width: 106px;
+  aspect-ratio: 106/114;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease-in-out;
+  img {
+    width: 100%;
+  }
+  @include sm {
+    width: 75px;
+  }
+}
+
+.links-bars-holder {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.header-links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  a {
+    width: 60px;
+    height: 37px;
+    border-radius: 20px;
+    background-color: $primary-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    transition: all ease-in-out 0.2s;
+
+    &:focus {
+      color: #fff;
+    }
+    &:hover {
+      color: #fff;
+      background-color: $secondary-color;
+    }
+
+    .google {
+      font-size: 21px;
+    }
+    .apple {
+      font-size: 26px;
+    }
+  }
+}
+
+.blur-header {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 0px 20px 0px;
+  backdrop-filter: saturate(180%) blur(7px);
+  background-color: rgba(#fff, 0.9);
+  .logo {
+    width: 75px;
+    @include sm {
+      width: 50px;
+    }
+  }
+}
