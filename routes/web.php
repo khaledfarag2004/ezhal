@@ -1,11 +1,9 @@
 <?php
 
+use App\Http\Controllers\Dashboard\DashboardController;
+use App\Http\Controllers\Site\SiteController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [SiteController::class, 'index']);
 
-Route::get('/admin', function () {
-    return view('dashboard.index');
-});
+Route::get('/admin', [DashboardController::class, 'index']);
